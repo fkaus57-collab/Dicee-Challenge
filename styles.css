@@ -1,0 +1,68 @@
+.container {
+  width: min(92%, 1000px);
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  width: min(45%, 256px);
+  text-align: center;
+  display: inline-block;
+
+}
+
+body {
+  background-color: #393E46;
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: clamp(2rem, 6vw, 5rem);
+  color: #4ECCA3;
+}
+
+p {
+  font-size: 2rem;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}
+
+.controls { margin-top: 36px; }
+#start-game {
+  padding: 14px 32px;
+  border: 0;
+  border-radius: 12px;
+  background: #4ECCA3;
+  color: #232931;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+#start-game:hover:not(:disabled) { background: #79dfbb; }
+#start-game:focus-visible { outline: 3px solid #EEEEEE; outline-offset: 5px; }
+#start-game:disabled { opacity: 0.65; cursor: wait; }
+.rolling { animation: roll 300ms ease-in-out infinite; }
+.img2.rolling { animation-direction: reverse; }
+@keyframes roll {
+  0%, 100% { transform: translateY(0) rotate(-12deg); }
+  25% { transform: translateY(-18px) rotate(15deg); }
+  50% { transform: translateY(-4px) rotate(-20deg); }
+  75% { transform: translateY(-12px) rotate(10deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rolling { animation: none; }
+}
